@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema NFe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e3c72, #97aabe);
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 360px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #1e3c72;
+            color: #fff;
+            padding: 15px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .icon {
+            width: 100px;
+            height: 100px;
+            background-color: #f1f1f1;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon img {
+            width: 60%;
+            height: 60%;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .form-group input {
+            width: 90%;
+            padding: 10px 10px 10px 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group input:focus {
+            border-color: #1e3c72;
+            outline: none;
+            box-shadow: 0 0 5px rgba(30, 60, 114, 0.5);
+           
+        }
+
+        .form-group .icon-input {
+            position: absolute;
+            top: 30%;
+            /* right: 20px; */
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 1.2rem;
+        }
+
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+
+        .options a {
+            text-decoration: none;
+            color: #1e3c72;
+        }
+
+        .options a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            background-color: #1e3c72;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #16365b;
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">EMISSOR DE NFe</div>
+        <div class="icon">
+            <img src="data:image/png;base64,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" alt="User Icon">
+        </div>
+        <form action="index.html">
+            <div class="form-group">
+                <input type="text" id="login" name="login" placeholder="Usuario">
+                <!-- <span class="icon-input">&#128100;</span> -->
+            </div>
+            <div class="form-group">
+                <input type="password" id="senha" name="senha" placeholder="Senha">
+                <!-- <span class="icon-input">&#128274;</span> -->
+            </div>
+            <div class="options">
+                <label><input type="checkbox" name="remember"> me lembre</label>
+                <a href="#">Esqueceu sua Senha?</a>
+            </div>
+            <button class="btn" type="submit">LOGAR</button>
+        </form>
+        <div class="footer">&copy; 2024 Sistema NFe</div>
+    </div>
+</body>
+</html>
