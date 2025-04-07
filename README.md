@@ -1,15 +1,15 @@
-# 🚀 AutomacaoEmitirNFe - Mini Projeto de Emissão de Notas Fiscais Automatizado
+# AutomacaoEmitirNFe - Mini Projeto de Emissão de Notas Fiscais Automatizado
 
 Este mini projeto foi desenvolvido para demonstrar o poder da automação no dia a dia de empresas que lidam com a emissão constante de notas fiscais eletrônicas (NF-e). Realizar esse processo manualmente pode ser cansativo, propenso a erros e, principalmente, um desperdício de tempo valioso.
 
-## 🧹 Objetivo
+##  Objetivo
 Automatizar todas as etapas do processo de emissão de notas fiscais, desde o login na plataforma até o preenchimento de dados e envio final das notas. Com essa automação, é possível:
 
 - Economizar tempo operacional
 - Reduzir erros manuais
 - Tornar o processo mais escalável e eficiente
 
-## 🔄 Como funciona?
+## Como funciona?
 
 O robô simula as etapas que um colaborador faria manualmente:
 
@@ -19,15 +19,15 @@ O robô simula as etapas que um colaborador faria manualmente:
 4. Gera e emite a nota fiscal
 5. Repete o processo para quantas notas forem necessárias
 
-A automação é flexível e escalável: se houver mil notas fiscais para emitir, o robô dará conta sem reclamar! ☺️
+A automação é flexível e escalável: se houver mil notas fiscais para emitir, o robô dará conta sem reclamar!
 
-## 📊 Resultados Esperados
+## Resultados Esperados
 
 - Emissão rápida e padronizada de NF-es
 - Redução de retrabalhos e correções
 - Liberação da equipe para tarefas mais estratégicas
 
-## ⚖️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **Python**
 - **Selenium**
@@ -35,7 +35,7 @@ A automação é flexível e escalável: se houver mil notas fiscais para emitir
 - **SQLite/MySQL** (para base de dados)
 - **re (Regex)** para tratamento de strings
 
-## 🌐 Possíveis Expansões
+## Possíveis Expansões
 
 - Integração com ERPs
 - Emissão e envio automático por e-mail
